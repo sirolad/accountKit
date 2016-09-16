@@ -2,14 +2,29 @@
 
 Implementation of Facebook's Account Kit on Laravel. It is live [Here](https://schoo.herokuapp.com/)
 
+## Usage
 
-## Contributing
+To download and use this project you need to have the following installed on your machine
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+- Composer
+  Visit the [official website](https://getcomposer.org/doc/00-intro.md) for installation instructions.
+- Laravel homestead
+  Visit [Laravel website](http://laravel.com/docs/5.1/homestead) for installation and setup instructions.
 
-## Security Vulnerabilities
+When you have completed the above processes, run:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+```bash
+$ git clone https://github.com/andela-sakande/accountKit
+`````
+to clone the repository to your working directory. This step presumes that you have git set up and running.
+
+Run
+
+```bash
+$ composer install
+```
+to pull in the project dependencies.
+
 
 ## Credits
 
