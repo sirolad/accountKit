@@ -57,9 +57,10 @@
         <!-- tab-content -->
     </div>
     <!-- /form -->
+    <script src="js/ack.js"></script>
+    <script type="text/javascript" src="https://sdk.accountkit.com/en_US/sdk.js"></script>
     <script src='js/jquery.min.js'></script>
     <script src="js/index.js"></script>
-    <script src="js/ack.js"></script>
 </body>
 
 </html>
