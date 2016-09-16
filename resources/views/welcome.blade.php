@@ -7,7 +7,6 @@
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ load_asset('css/normalize.css') }}">
     <link rel="stylesheet" href="{{ load_asset('css/style.css') }}">
-    <script type="text/javascript" src="https://sdk.accountkit.com/en_US/sdk.js"></script>
 </head>
 
 <body>
@@ -27,7 +26,7 @@
                     <div class="top-row">
                         <div class="field-wrap">
                             <label>
-                                Country Code<span class="req">*</span>
+                                &nbsp; Country Code<span class="req">*</span>
                             </label>
                             <input type="text" id="country" value="+" required autocomplete="off" />
                         </div>
