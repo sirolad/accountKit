@@ -11,10 +11,10 @@
         margin: 0 0 10px;
         font-size: 13px;
         line-height: 1.42857143;
-        color: red;
+        color: #e5e5e5;
         word-break: break-all;
         word-wrap: break-word;
-        background-color: #000;
+        background-color: #286090;
         border: 1px solid #ccc;
         border-radius: 4px;
     }
