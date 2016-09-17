@@ -32,7 +32,7 @@ AccountKit is maintained by `Surajudeen AKANDE`.
 
 ## Contacts
 
-You can reach the developer on [Email](surajudeen.akande@andela.com)
+You can reach the developer on `surajudeen.akande@andela.com`
 
 ## License
 
