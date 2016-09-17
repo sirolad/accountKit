@@ -1,6 +1,6 @@
 # Account kit on Laravel
 
-Implementation of Facebook's Account Kit on Laravel. It is live [Here](https://schoo.herokuapp.com/)
+Implementation of Facebook's Account Kit on Laravel. It is live [Here](https://lagosworkshop.herokuapp.com)
 
 ## Usage
 
@@ -29,6 +29,10 @@ to pull in the project dependencies.
 ## Credits
 
 AccountKit is maintained by `Surajudeen AKANDE`.
+
+## Contacts
+
+You can reach the developer on [Email](surajudeen.akande@andela.com)
 
 ## License
 

@@ -17,13 +17,13 @@ function loginCallback(response) {
 
   else if (response.status === "NOT_AUTHENTICATED") {
       // handle authentication failure
+      alert('You are not Authenticated');
   }
   else if (response.status === "BAD_PARAMS") {
     // handle bad parameters
     alert('wrong inputs');
   }
 }
-
 
 function smsLogin() {
   var countryCode = document.getElementById('country').value;
