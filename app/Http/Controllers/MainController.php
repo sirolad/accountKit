@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client as GuzzleHttpClient;
 use GuzzleHttp\Exception\RequestException;
@@ -36,11 +35,24 @@ class MainController extends Controller
    protected $endPointUrl;
 
    /**
+    * [$userAccessToken description]
+    * @var [type]
+    */
+   public $userAccessToken;
+
+   /**
+    * [$refreshInterval description]
+    * @var [type]
+    */
+   protected $refreshInterval;
+
+   /**
     * [__construct description]
     */
    public function __construct()
    {
       $this->appId            = config('accountkit.app_id');
+      $this->client           = new GuzzleHttpClient();
       $this->appSecret        = config('accountkit.app_secret');
       $this->endPointUrl      = config('accountkit.end_point');
       $this->tokenExchangeUrl = config('accountkit.tokenExchangeUrl');
@@ -54,25 +66,32 @@ class MainController extends Controller
    */
   public function login(Request $request)
   {
-      $client = new GuzzleHttpClient();
-
       $url = $this->tokenExchangeUrl.'grant_type=authorization_code'.
               '&code='. $request->get('code').
               "&access_token=AA|$this->appId|$this->appSecret";
 
-      $apiRequest = $client->request('GET', $url);
+      $apiRequest = $this->client->request('GET', $url);
 
       $body = json_decode($apiRequest->getBody());
 
-      $userId = $body->id;
+      $this->userAccessToken = $body->access_token;
 
-      $userAccessToken = $body->access_token;
+      $this->refreshInterval = $body->token_refresh_interval_sec;
 
-      $refreshInterval = $body->token_refresh_interval_sec;
+      return $this->getData();
+  }
 
-      $getData = $client->request('GET', $this->endPointUrl.$userAccessToken);
+  public function getData()
+  {
+      $request = $this->client->request('GET', $this->endPointUrl.$this->userAccessToken);
 
-      $data = json_decode($getData->getBody());
+      $data = json_decode($request->getBody());
+
+      $userId = $data->id;
+
+      $userAccessToken = $this->userAccessToken;
+
+      $refreshInterval = $this->refreshInterval;
 
       $phone = isset($data->phone) ? $data->phone->number : '';
 
@@ -83,9 +102,7 @@ class MainController extends Controller
 
   public function logout()
   {
-      Auth::logout();
-
-      return view('welcome');
+      return redirect('welcome');
   }
 
 }
