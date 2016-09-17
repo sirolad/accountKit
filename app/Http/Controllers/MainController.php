@@ -102,7 +102,12 @@ class MainController extends Controller
 
   public function logout()
   {
-      return redirect('welcome');
+      return redirect()->route('index');
+  }
+
+  public function index()
+  {
+    return view('welcome');
   }
 
 }
