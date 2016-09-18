@@ -1,6 +1,6 @@
 # Account kit on Laravel
 
-Implementation of Facebook's Account Kit on Laravel. It is live [Here](https://schoo.herokuapp.com/)
+Implementation of Facebook's Account Kit on Laravel. It is live [Here](https://lagosworkshop.herokuapp.com)
 
 ## Usage
 
@@ -27,10 +27,10 @@ to pull in the project dependencies.
 
 
 
-After that, you need to update your app key by typing this in the terminal , make sure you are in the directory of your project folder:
-```bash
+After that, you need to update your app key in your laravel app by typing this in the terminal , make sure you are in the directory of your laravel app project folder:
+
 $ php artisan key:generate
-```
+
 Further, you need to navigate to https://developers.facebook.com/ to create a new app.
 
 Once your your app has been created, you then create an account kit, 
@@ -58,7 +58,7 @@ This should be edited on
 1.   .env file   //located in your project folder
 2.    ack.js       //located at public/js/
 
-If all goes well then you should buy yourself a beer.
+If all goes well then you should by me a beer.
 
 
 
@@ -67,6 +67,10 @@ If all goes well then you should buy yourself a beer.
 ## Credits
 
 AccountKit is maintained by `Surajudeen AKANDE`.
+
+## Contacts
+
+You can reach the developer on `surajudeen.akande@andela.com`
 
 ## License
 
