@@ -1,6 +1,6 @@
 # Account kit on Laravel
 
-Implementation of Facebook's Account Kit on Laravel. It is live [Here](https://lagosworkshop.herokuapp.com)
+Implementation of Facebook's Account Kit on Laravel. It is live [Here](https://schoo.herokuapp.com/)
 
 ## Usage
 
@@ -26,13 +26,47 @@ $ composer install
 to pull in the project dependencies.
 
 
+
+After that, you need to update your app key by typing this in the terminal , make sure you are in the directory of your project folder:
+```bash
+$ php artisan key:generate
+```
+Further, you need to navigate to https://developers.facebook.com/ to create a new app.
+
+Once your your app has been created, you then create an account kit, 
+
+navigate to +add product , look for account kit and click get started then set it up .
+
+* set the Server URLs to the url of your landing page of your project eg accountkit.dev, localhost/accountkit etc 
+
+
+* Enable Client Access Token Flow by clicking yes
+
+* Under the Require App Secret field , set it to NO
+
+
+
+
+By now you will have your appid and account kit app secret
+
+To locate account kit app secret, on your developers page on facebook  navigate to  >>Account kit >> and look for Account Kit App Secret
+
+click on show to reaveal
+
+This should be edited on 
+
+1.   .env file   //located in your project folder
+2.    ack.js       //located at public/js/
+
+If all goes well then you should buy yourself a beer.
+
+
+
+
+
 ## Credits
 
 AccountKit is maintained by `Surajudeen AKANDE`.
-
-## Contacts
-
-You can reach the developer on `surajudeen.akande@andela.com`
 
 ## License
 
