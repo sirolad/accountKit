@@ -37,6 +37,8 @@ Once your your app has been created, you then create an account kit,
 
 navigate to +add product , look for account kit and click get started then set it up .
 
+##important
+
 * set the Server URLs to the url of your landing page of your project eg accountkit.dev, localhost/accountkit etc 
 
 
