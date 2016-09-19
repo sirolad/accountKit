@@ -60,7 +60,7 @@ This should be edited on
 1.   .env file   //located in your project folder
 2.    ack.js       //located at public/js/
 
-If all goes well then you should by me a beer.
+If all goes well then you should give yourself a treat.
 
 
 
