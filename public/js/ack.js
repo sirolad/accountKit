@@ -1,6 +1,6 @@
 AccountKit_OnInteractive = function() {
   AccountKit.init({
-    appId: '254054508321927',
+    appId: '182258765554434',
     state: document.getElementById('_token').value,
     version: 'v1.0'
   });
